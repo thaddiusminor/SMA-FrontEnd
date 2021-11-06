@@ -23,11 +23,8 @@ function App() {
         <Route path= "/Login">
           <Login/>
         </Route>
-        <Route path= "/Register">
-          <Register/>
-        </Route>
-        <Route path= "/landing">
-          <Home/>
+        <Route path= "/MainPage">
+          <Mainpage/>
         </Route>
       </Switch>
     </Router>
