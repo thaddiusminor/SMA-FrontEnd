@@ -1,9 +1,9 @@
 import "./sidebar.css";
-import {
-   Chat, Group, Bookmark, Event, School, PhoneInTalk, } from "@mui/icons-material"
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import WorkIcon from '@mui/icons-material/Work';
-import BackpackIcon from '@mui/icons-material/Backpack';
+import { Chat, Group, Bookmark, Event, School, PhoneInTalk } from "@mui/icons-material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import WorkIcon from "@mui/icons-material/Work";
+import BackpackIcon from "@mui/icons-material/Backpack";
+import pic1 from "../pic1.jpg";
 
 export default function Sidebar() {
   return (

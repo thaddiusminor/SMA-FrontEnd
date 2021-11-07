@@ -3,6 +3,7 @@ import "./mainpage.css";
 import Sidebar from "../Sidebar/sidebar";
 import Topbar from "../Topbar/topbar";
 import Newsfeed from "../NewsFeed/newsfeed";
+import pic1 from "../pic1.jpg";
 
 function Mainpage() {
   return (
@@ -13,7 +14,7 @@ function Mainpage() {
         <div className="profileRight">
           <div className="profileRightTop">
             <div className="profileCover">
-              <img className="profileCoverImg" src="" alt="" />
+              <img className="profileCoverImg" src="/src/Components/pic1.jpg" alt="" />
               <img className="profileUserImg" src="assets/person/7.jpeg" alt="" />
             </div>
             <div className="profileInfo">
