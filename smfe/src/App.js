@@ -13,22 +13,20 @@ import jwtDecoded from "jwt-decode";
 function App() {
   return (
     <Router>
-      <Auth>
-        <Switch>
-          <Route exact path="/">
-            <Register />
-          </Route>
-          <Route path="/Register">
-            <Register />
-          </Route>
-          <Route path="/Login">
-            <Login />
-          </Route>
-          <Route path="/MainPage">
-            <Mainpage />
-          </Route>
-        </Switch>
-      </Auth>
+      <Switch>
+        <Route exact path="/">
+          <Register />
+        </Route>
+        <Route path="/Register">
+          <Register />
+        </Route>
+        <Route path="/Login">
+          <Login />
+        </Route>
+        <Route path="/MainPage">
+          <Mainpage />
+        </Route>
+      </Switch>
     </Router>
   );
 }

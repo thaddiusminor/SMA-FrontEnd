@@ -17,9 +17,10 @@ export default function Auth(props) {
       console.log(error);
     }
   }, []);
+
   useEffect(() => {
     if (username) {
-      history.push("/MainPage");
+      history.push("/Mainpage");
     } else {
       history.push("/Login");
     }
