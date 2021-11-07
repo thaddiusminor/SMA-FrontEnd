@@ -1,0 +1,8 @@
+.profile {
+  display: flex;
+  align-items: stretch;
+}
+
+.profileRight {
+  flex: 3;
+}
