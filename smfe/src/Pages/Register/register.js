@@ -11,12 +11,13 @@ function Register() {
 
   const submitRegister = () => {
     axios
-      .post("http://localhost:5000/api/users/register", {
+      .post("localhost:5000/api/users/register", {
         username: username,
         email: email,
         password: password,
       })
       .then((response) => {
+        history.push("/Login");
         console.log(response);
       });
   };

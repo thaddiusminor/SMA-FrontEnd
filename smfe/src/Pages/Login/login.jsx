@@ -6,16 +6,21 @@ import { useHistory } from "react-router-dom";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const history = useHistory();
 
   const submitLogin = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/users/login", {
+      .post("http:/localhost:5000/api/users/login", {
         email: email,
         password: password,
       })
       .then((response) => {
-        localStorage.setItem("token", response.data);
+        console.log(response);
+        localStorage.setItem("token", response.data.token);
+        localStorage.setItem("email", response.data.email);
+        // localStorage.setItem('username', response.data.username)
+        history.push("/Mainpage");
       });
   };
 
@@ -29,7 +34,7 @@ export default function Login() {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="email"
           type="email"
-          autofocus
+          autoFocus
         />
         <i class="fa fa-user"></i>
         <input

@@ -14,18 +14,21 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/">
-          <Register />
-        </Route>
-        <Route path="/Register">
-          <Register />
-        </Route>
-        <Route path="/Login">
-          <Login />
-        </Route>
-        <Route path="/MainPage">
-          <Mainpage />
-        </Route>
+        <Auth>
+          <Route exact path="/">
+            <Register />
+          </Route>
+          {/* <Route path="/Register">
+          <R/>
+        </Route> */}
+          <Route path="/Login">
+            <Login />
+          </Route>
+          <Route path="/MainPage">
+            <Mainpage />
+          </Route>
+          <Route path="/"></Route>
+        </Auth>
       </Switch>
     </Router>
   );
