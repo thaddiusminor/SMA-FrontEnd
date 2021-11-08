@@ -11,14 +11,14 @@ export default function Login() {
   const submitLogin = (e) => {
     e.preventDefault();
     axios
-      .post("http:/localhost:5000/api/users/login", {
+      .post("http://localhost:5000/api/users/login", {
         email: email,
         password: password,
       })
       .then((response) => {
         console.log(response);
         localStorage.setItem("token", response.data.token);
-        localStorage.setItem("email", response.data.email);
+        localStorage.setItem("email", email);
         // localStorage.setItem('username', response.data.username)
         history.push("/Mainpage");
       });

@@ -2,6 +2,7 @@ import React from "react";
 import "./post.css";
 import { MoreVert } from "@mui/icons-material";
 import { useState, useEffect } from "react";
+import Avatar from "@mui/icons-material";
 
 function Post({ post }) {
   // const [like, setLike] = useState(post.like);
@@ -18,7 +19,7 @@ function Post({ post }) {
           <div className="postTopLeft">
             <img
               className="postProfileImg"
-              // src={Users.filter((u) => u.id === post?.userId)[0].profilePicture}
+              // src=Users.filter((u) => u.id === post?.userId)[0].profilePicture}
               alt=""
             />
             <span className="postUsername">
@@ -31,12 +32,12 @@ function Post({ post }) {
           </div>
         </div>
         <div className="postCenter">
-          <span className="postText"></span>
-          <img className="postImg" alt="" />
+          <span className="postText">{post.text}</span>
+          <img className="" alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
-            <img className="likeIcon" src="assets/like.png" alt="" />
+            <img className="likeIcon" src="images/Allied-paratroopers.jpg" alt="" />
             <img className="likeIcon" src="assets/heart.png" alt="" />
             <span className="postLikeCounter"> people like it</span>
           </div>

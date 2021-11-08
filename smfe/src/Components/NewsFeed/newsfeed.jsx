@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Post from "../Post/post";
 import Status from "../StatusBox/status";
 import "./newsfeed.css";
@@ -9,12 +9,21 @@ function Newsfeed() {
   // // //RETRIEVE POST//
   // // const getPost = () =>{
   //   axios.get("http://localhost:5000/api/view/email")
-
+  const [statuses, setStatuses] = useState([]);
+  const email = localStorage.getItem("email");
+  useEffect(() => {
+    axios.get(`http://localhost:5000/api/users/view/${email}`).then((res) => {
+      setStatuses(res.data);
+    });
+  }, []);
+  console.log(statuses);
   return (
     <div className="feed">
       <div className="feedWrapper">
         <Status />
-        <Post />
+        {statuses.map((status, index) => (
+          <Post key={index} post={status} />
+        ))}
       </div>
     </div>
   );

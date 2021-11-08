@@ -4,7 +4,6 @@ import { Search, Person, Notifications, Chat } from "@mui/icons-material";
 export default function Topbar() {
   const logout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("email");
   };
   return (
     <div className="topbarContainer">

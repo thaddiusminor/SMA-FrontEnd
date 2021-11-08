@@ -18,7 +18,7 @@ function Mainpage() {
               <img className="profileUserImg" src="assets/person/7.jpeg" alt="" />
             </div>
             <div className="profileInfo">
-              <h4 className="profileInfoName">John Wick</h4>
+              <h4 className="profileInfoName">User</h4>
               <span className="profileInfoDesc">Hello!</span>
             </div>
           </div>
